@@ -55,24 +55,10 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/psyched_4_health_logo.svg" alt="Bootstrap to Wordpress"></a>
+						<a class="navbar-brand" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/psyched_4_health_logo.svg" alt="Psyched 4 Health"></a>
 					</div><!-- navbar-header-->
 
-					<?php 
-						wp_nav_menu( array( 
-								'theme_location'		=> 'primary',
-								'container'					=> 'nav',
-								'container_class'		=> 'navbar-collapse collapse',
-								'menu_class'				=> 'nav navbar-nav navbar-right'
-
-
-						) );
-					
-					
-					?>
-
-
-					<!--<div class="navbar-collapse collapse">
+				<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
 							<li>
 								<a href="index.html">
@@ -90,7 +76,7 @@
 							<li><a href="contact.html"><img src="assets/img/family_icon.svg" alt="Family">Family/Fun
 							</a></li>
 						</ul>
-					</div>-->
+					</div>
 				</div>
 			</div>
 		

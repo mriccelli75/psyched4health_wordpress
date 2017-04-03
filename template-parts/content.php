@@ -9,17 +9,20 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+	<?php if ( has_post_thumbnail() ) { //check for feature image ?>
 		<div class="post-image">
-		  <img src="assets/img/article_one.png" alt="article one photo">
+		<?php the_post_thumbnail(); ?>
+		  
 		</div><!-- post-image -->
-	
+	<?php } ?>
+
 	<header class="entry-header">
 			<?php
 					if ( is_single() ) :
 						the_title( '<h1 class="entry-title">', '</h1>' );
 					else :
-						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+						the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 					endif;
 
 					if ( 'post' === get_post_type() ) : ?>
@@ -39,8 +42,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 	<div class="post-excerpt">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt... <a href="post.html">continue reading &raquo;</a>
-	</p>
+ <?php the_excerpt(); ?>
 </div><!-- post-excerpt -->
 	
 </article><!-- #post-## -->

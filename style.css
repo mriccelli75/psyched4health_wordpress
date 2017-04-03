@@ -896,8 +896,8 @@ footer p {
 	/* inherit base h1 font size */
 }
 
-.post-image {
-	height: 320px;
+.post-image img {
+	height: auto;
   overflow: hidden;
 }
 
