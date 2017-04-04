@@ -42,7 +42,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 	<div class="post-excerpt">
- <?php the_excerpt(); ?>
+ 	<?php the_excerpt(); ?>
 </div><!-- post-excerpt -->
 	
 </article><!-- #post-## -->

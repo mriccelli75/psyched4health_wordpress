@@ -58,10 +58,7 @@ get_header(); ?>
 				================================================== -->
 					<aside class="col-sm-4">
 							<?php get_sidebar(); ?>
-								
-					
 					</aside><!-- aside -->
 	</div><!-- #primary -->
 </div><!-- container -->
-
 <?php get_footer(); ?>

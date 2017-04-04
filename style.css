@@ -685,7 +685,10 @@ section {
 }
 
 section h2 {
-	margin: 20px 0 40px;
+	margin-top: 0;
+	margin-left: 0;
+	margin-bottom: 20px;
+	margin-right: 0;
 }
 
 section h3 {

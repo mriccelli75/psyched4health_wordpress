@@ -40,47 +40,40 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pysched4health_2017' ); ?></a>
 
-		<header class="site-header" role="banner">
+	<header class="site-header" role="banner">
 		
 		<!-- NAVBAR
 		================================================== -->
 		<div class="navbar-wrapper">
-			
 			<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/psyched_4_health_logo.svg" alt="Psyched 4 Health"></a>
-					</div><!-- navbar-header-->
+					<div class="container">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/psyched_4_health_logo.svg" alt="Psyched 4 Health"></a>
+							</div><!-- navbar-header-->
 
-				<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav navbar-right">
-							<li>
-								<a href="index.html">
-								<img src="assets/img/fitness_icon.svg" alt="Fitness">Fitness
-								</a>
-							</li>
-							<li class="active">
-								<a href="blog.html"><img src="assets/img/focus_icon.svg" alt="Focus">Focus
-								</a>
-							</li>
-							<li><a href="resources.html">
-								<img src="assets/img/food_icon.svg" alt="Food">Food
-							</a>
-						</li>
-							<li><a href="contact.html"><img src="assets/img/family_icon.svg" alt="Family">Family/Fun
-							</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		
-		</div>
+								<!-- If the menu (WP admin area) is not set, then the "menu_class" is applied to "container". In other words, it overwrites the "container_class". Ref: http://wordpress.org/support/topic/wp_nav_menu-menu_class-usage-bug?replies=4 -->
+					
+					
+							<?php
+								wp_nav_menu( array(
+									
+									'theme_location'	=> 'primary',
+									'container'			=> 'nav',
+									'container_class'	=> 'navbar-collapse collapse',
+									'menu_class'		=> 'nav navbar-nav navbar-right'
+									
+								) );
+							?>
+				
+					</div><!-- container -->
+			</div><!-- navbar-fixed-top -->
+		</div><!-- navbar-wrapper -->
 	</header>
 
 	<div id="content" class="site-content">
