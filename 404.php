@@ -8,7 +8,9 @@
  */
 
 get_header(); ?>
-
+<div class="container">
+	<div class="row">
+	<div class="col-md-12">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -18,7 +20,7 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'pysched4health_2017' ); ?></p>
+					<h2><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'pysched4health_2017' ); ?></h2>
 
 					<?php
 						get_search_form();
@@ -59,6 +61,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
+</div>
+</div>
 <?php
 get_footer();

@@ -44,7 +44,8 @@ function pysched4health_2017_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'pysched4health_2017' ),
+		'primary' => esc_html__( 'primary', 'pysched4health_2017' ),
+		'Footer' => esc_html__( 'Footer Menu', 'pysched4health_2017' ),
 	) );
 
 	/*
@@ -125,9 +126,10 @@ function theme_scripts() {
 	
    	
 		wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '', true );
-		wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), '', true );
+		wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+
 
 
 /**

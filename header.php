@@ -78,14 +78,35 @@
 							</div><!-- navbar-header-->
 
 								<!-- If the menu (WP admin area) is not set, then the "menu_class" is applied to "container". In other words, it overwrites the "container_class". Ref: http://wordpress.org/support/topic/wp_nav_menu-menu_class-usage-bug?replies=4 -->
-						 <?php 
-          wp_nav_menu(array(
-            'theme_location' => 'Primary',
-            'menu_class'    => 'primary-menu',
-            'container'     => false,
-            'items_wrap'    => '%3$s'
-          ) );
-         ?>
+							<div class="navbar-collapse collapse">
+
+									<?php 
+										wp_nav_menu( array(
+											'theme_location'	=> 'primary',
+											'container'				=> 'nav',
+											'container_class'	=>	'navbar-collapse collapse',
+											'menu_class'			=>	'nav navbar-nav navbar-right'
+										) );
+									?>
+								<!--<ul class="nav navbar-nav navbar-right">
+										<li>
+											<a href="index.html">
+											<img src="assets/img/fitness_icon.svg" alt="Fitness">Fitness
+											</a>
+										</li>
+										<li class="active">
+											<a href="blog.html"><img src="assets/img/focus_icon.svg" alt="Focus">Focus
+											</a>
+										</li>
+										<li><a href="resources.html">
+											<img src="assets/img/food_icon.svg" alt="Food">Food
+										</a>
+										</li>
+										<li><a href="contact.html"><img src="assets/img/family_icon.svg" alt="Family">Family/Fun
+										</a>
+										</li>
+								</ul>-->
+							</div><!-- navbar-collapse collapse -->
 					</div><!-- container -->
 			</div><!-- navbar-fixed-top -->
 		</div><!-- navbar-wrapper -->
@@ -93,22 +114,7 @@
 
 	<div id="content" class="site-content">
 
-		<!--<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav navbar-right">
-							<li>
-								<a href="index.html">
-								<img src="assets/img/fitness_icon.svg" alt="Fitness">Fitness
-								</a>
-							</li>
-							<li class="active">
-								<a href="blog.html"><img src="assets/img/focus_icon.svg" alt="Focus">Focus
-								</a>
-							</li>
-							<li><a href="resources.html">
-								<img src="assets/img/food_icon.svg" alt="Food">Food
-							</a>
-						</li>
-							<li><a href="contact.html"><img src="assets/img/family_icon.svg" alt="Family">Family/Fun
-							</a></li>
-						</ul>
-					</div>-->
+
+
+
+				

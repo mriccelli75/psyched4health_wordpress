@@ -21,18 +21,26 @@
 				<a href="/"><img src="<?php bloginfo('template_directory'); ?>/assets/img/psyched_4_health_logo_ftr.svg" alt="psyched for health"></a>
 			</div><!-- end col -->
 			<div class="col-sm-6">
-				<nav>
+			
+							<?php 
+										wp_nav_menu( array(
+											'theme_location'	=> 'Footer',
+											'container'				=> 'nav',
+											'menu_class'			=>	'list-unstyled list-inline'
+										) );
+									?>
+					<!--<nav>
 					<ul class="list-unstyled list-inline">
-						<li><a href="">Fitness</a></li>
+						<!--<li><a href="">Fitness</a></li>
 						<li><a href="">Focus</a></li>
 						<li><a href="">Food</a></li>
 						<li><a href="">Family/Fun</a></li>
 						<li class="signup-link"><a href="contact.html">Contact Me</a></li>
 					</ul>
-				</nav>
+				</nav>-->
 			</div><!-- end col -->
 			<div class="col-sm-3">
-				<p class="pull-right">&copy; 2017 Psyched4Health</p>
+				<p class="pull-right">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 			</div><!-- end col -->
 		</div><!-- container -->
 	</footer>
