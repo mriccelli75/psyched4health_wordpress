@@ -105,7 +105,7 @@ add_action( 'widgets_init', 'pysched4health_2017_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pysched4health_2017_scripts() {
-	wp_enqueue_style( 'pysched4health_2017-style', get_stylesheet_uri() );
+
 
 	wp_enqueue_script( 'pysched4health_2017-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -116,6 +116,19 @@ function pysched4health_2017_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pysched4health_2017_scripts' );
+
+// The CSS files for your theme
+function theme_scripts() {
+	  wp_enqueue_style('bootstrap-theme', get_template_directory_uri() . '/assets/css/bootstrap-theme.min.css', array('bootstrap-css'), '', 'all');
+    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '', 'all');
+		wp_enqueue_style( 'pysched4health_2017-style', get_stylesheet_uri() );
+	
+   	
+		wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '', true );
+		wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), '', true );
+}
+add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+
 
 /**
  * Implement the Custom Header feature.

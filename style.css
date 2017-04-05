@@ -489,6 +489,7 @@ button, input, .btn, a.btn {
 	border-color: #d95131;
 }
 
+
 .text-danger, li.text-danger a {
 	color: #dd5638;
 }
@@ -622,6 +623,9 @@ form textarea {
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 }
 
+input.search-submit {
+    display: none;
+}
 
 
 
@@ -673,9 +677,6 @@ a.navbar-brand {
   display: inline-block;
   padding-right: 5px;
 }
-
-
-
 section {
 	padding: 80px 0;
 }
