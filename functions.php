@@ -42,7 +42,7 @@ function pysched4health_2017_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'primary', 'pysched4health_2017' ),
 		'Footer' => esc_html__( 'Footer Menu', 'pysched4health_2017' ),
@@ -165,3 +165,17 @@ function new_excerpt_more($more){
 	return '... <a class="moretag" href="' . get_permalink($post->ID) . '"> continue reading &raquo; </a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+/**
+* Add active class to menu
+*/
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+function special_nav_class ($classes, $item) {
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'active ';
+    }
+    return $classes;
+}
