@@ -9,14 +9,18 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<!-- BLOG CONTENT
+	================================================== -->
+    <div class="container">
+	    <div class="row" id="primary">
+	    
+		    <main id="content" class="col-sm-8" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'pysched4health_2017' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h3 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'pysched4health_2017' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
 			</header><!-- .page-header -->
 
 			<?php
@@ -28,7 +32,8 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				get_template_part( 'template-parts/content', get_post_format() );
+				//get_template_part( 'template-parts/content', 'search' );
 
 			endwhile;
 
@@ -41,8 +46,13 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+			<!-- SIDEBAR
+				================================================== -->
+					<aside class="col-sm-4">
+							<?php get_sidebar(); ?>
+					</aside><!-- aside -->
+</div>
+</div>
 
-<?php
-get_sidebar();
-get_footer();
+<?php 
+get_footer(); ?>

@@ -426,7 +426,7 @@ p {
 }
 
 a:link, a:visited {
-	color: #ff5f00;
+	color: #c227b9;
 	-webkit-transition-duration: 0.4s;
    transition-duration: 0.4s;
 }
@@ -533,56 +533,135 @@ a.text-danger:hover {
 /* === CUSTOM ICON SPRITES === */
 
 .menu-icon {
-  padding-left: 25px;
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
+  	padding-left: 25px;
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched_icon_sprite.png') no-repeat;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
 
 .menu-icon.fitness { 
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched_icon_sprite.png') no-repeat;
 	background-position: 7px 10px;
 }
 
 .menu-icon.focus { 
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched_icon_sprite.png') no-repeat;
 	background-position: -125px 12px; 
 }
 
 .menu-icon.food	{ 
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched_icon_sprite.png') no-repeat;
 	background-position: -242px 10px;
 }
 
 .menu-icon.family-fun	{ 
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched_icon_sprite.png') no-repeat;
+	background-position: -343px 11px;
+}
+
+/*Hover states for icons*/
+
+.menu-icon.fitness:hover {
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched-4-health-sprite_hover.png') no-repeat;
+	background-position: 7px 10px;
+}
+
+.menu-icon.focus:hover {
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched-4-health-sprite_hover.png') no-repeat;
+	background-position: -125px 12px;
+}
+
+.menu-icon.food:hover	{
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched-4-health-sprite_hover.png') no-repeat;
+	background-position: -242px 10px;
+}
+
+.menu-icon.family-fun:hover	{
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched-4-health-sprite_hover.png') no-repeat;
+	background-position: -343px 11px;
+}
+
+
+/*Active State icons */
+
+
+li#menu-item-24.active {
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched-4-health-sprite_hover.png') no-repeat;
+	background-position: 7px 10px;
+}
+
+li#menu-item-21.active {
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched-4-health-sprite_hover.png') no-repeat;
+	background-position: -125px 12px;
+}
+
+li#menu-item-19.active {
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched-4-health-sprite_hover.png') no-repeat;
+	background-position: -242px 10px;
+}
+
+li#menu-item-20.active  {
+	background: url('http://localhost:8888/wp-content/uploads/2017/04/psyched-4-health-sprite_hover.png') no-repeat;
 	background-position: -343px 11px;
 }
 
 @media screen and (max-width : 768px) {
 
-.menu-icon {
-  padding-left: 0;
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
-}
+	.menu-icon {
+		padding-left: 0;
+		background: none;
+	}
 
-.menu-icon.fitness { 
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
-	background-position: 7px 10px;
-}
+	.menu-icon.fitness {
+		background: none;
+	}
 
-.menu-icon.focus { 
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
-	background-position: -125px 12px; 
-}
+	.menu-icon.focus {
+		background: none;
+	}
 
-.menu-icon.food	{ 
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
-	background-position: -80px 0;
-}
+	.menu-icon.food	{
+		background: none;
+	}
 
-.menu-icon.family-fun	{ 
-	background: url('http://localhost:8888/wp-content/uploads/2017/04/pyched_icon_sprite.png') no-repeat;
-	background-position: -343px 11px;
-}
+	.menu-icon.family-fun	{
+		background: none;
+	}
+/* Remove Hover Icon */
+	/*Hover states for icons*/
+
+	.menu-icon.fitness:hover {
+		background: none;
+	}
+
+	.menu-icon.focus:hover {
+		background: none;
+	}
+
+	.menu-icon.food:hover	{
+		background: none;
+	}
+
+	.menu-icon.family-fun:hover	{
+		background: none;
+	}
+
+	li#menu-item-24.active {
+		background: none;
+	}
+
+	li#menu-item-21.active {
+		background: none;
+	}
+
+	li#menu-item-19.active {
+		background: none;
+	}
+
+	li#menu-item-20.active  {
+		background: none;
+	}
+
 
 }
 /* ==== FORMS ==== */
@@ -714,6 +793,8 @@ a.navbar-brand {
 .navbar-default .navbar-nav>.active>a:focus {
     color: #ff5f00;
     background-color: transparent;
+		background-image: none;
+		box-shadow: none;
 }
 
 .navbar-collapse > ul > li a > img {
@@ -955,6 +1036,7 @@ footer p {
 	font-size: 12px;
 	width: 90%;
 	position: relative;
+	color: #c227b9;
 }
 
 .post-details i.fa {
